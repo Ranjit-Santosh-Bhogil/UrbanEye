@@ -1,0 +1,137 @@
+.sidebar {
+    width: 320px;
+    background: var(--color-surface);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
+    z-index: 50;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.02);
+}
+
+.sidebar-logo {
+    padding: 2.5rem 2rem;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.sidebar-brand-icon {
+    width: 240px;
+    height: auto;
+    max-height: 140px;
+    object-fit: contain;
+}
+
+.sidebar-logo h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.025em;
+    color: var(--color-primary);
+    display: inline-block;
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 2rem 1rem;
+    overflow-y: auto;
+}
+
+.sidebar-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1rem 1.25rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+    background: var(--color-surface-hover);
+}
+
+.nav-link.active {
+    color: #ffffff;
+    background: var(--color-primary);
+    box-shadow: 0 4px 12px var(--color-primary-glow);
+}
+
+.nav-link.active .nav-icon {
+    color: #ffffff;
+}
+
+.nav-icon {
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+}
+
+.sidebar-bottom {
+    padding: 1.5rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    transition: all var(--transition-fast);
+    border-radius: var(--radius-md);
+}
+
+.logout-btn:hover {
+    background-color: var(--color-error-bg);
+    color: var(--color-error);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+
+    .sidebar-logo h2,
+    .nav-link span,
+    .logout-btn span {
+        display: none;
+    }
+
+    .sidebar-logo {
+        padding: 1.5rem 0;
+        justify-content: center;
+        display: flex;
+    }
+
+    .nav-link,
+    .logout-btn {
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .nav-link.active {
+        background: var(--color-primary);
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        margin: 0 auto;
+    }
+}

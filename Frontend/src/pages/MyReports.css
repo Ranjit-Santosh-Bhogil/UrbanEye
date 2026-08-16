@@ -1,0 +1,55 @@
+.filter-bar {
+    display: inline-flex;
+    margin-bottom: 2.5rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    padding: 0.25rem;
+}
+
+.filter-btn {
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+    position: relative;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    color: var(--color-text-main);
+}
+
+.filter-btn.active {
+    background-color: var(--color-primary);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reports-container {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-surface);
+}
+
+.link-button {
+    display: inline-block;
+    float: right;
+    margin-top: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+}
+
+.link-button:hover {
+    background: var(--color-surface-hover);
+    text-decoration: underline;
+}
